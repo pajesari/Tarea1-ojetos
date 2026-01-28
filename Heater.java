@@ -12,4 +12,7 @@ public class Heater
     public Heater(){
         temperature = 15;
     }
+    public float getTemperature(){
+        return temperature;
+    }
 }
