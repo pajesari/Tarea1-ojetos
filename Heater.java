@@ -9,4 +9,7 @@ public class Heater
 {
     private float temperature;
     
+    public Heater(){
+        temperature = 15;
+    }
 }
