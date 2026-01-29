@@ -32,4 +32,10 @@ public class Heater
     temperature = temperature - increment;
 }
 }
+    public void setIncrement(float newIncrement) {
+    if (newIncrement > 0) {
+        increment = newIncrement;
+    }
+
+}
 }

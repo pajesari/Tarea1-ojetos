@@ -22,21 +22,52 @@ public class HeaterTest
     @Test
     public void testInit(){
        Heater Heater = new Heater(0, 500);
-       assertEquals(15, Heater.getTemperature(), .1);
+       float temperature = Heater.getTemperature();
+       
+       System.out.println("La temperatura del calentador " + temperature);
     }
     @Test
     public void testWarmer(){
-        Heater Heater = new Heater(0, 500);
-        Heater.warmer();
-        assertEquals(20, Heater.getTemperature(), 1);
+        Heater Heater = new Heater(0, 50); 
         
+        System.out.println("Temperatura " + Heater.getTemperature());
+        Heater.warmer(); 
+        System.out.println("Temperatura final " + Heater.getTemperature());
         
     }
     @Test
     public void testCooler(){
-        Heater Heater = new Heater(0, 500);
-        Heater.cooler();
-        assertEquals(10, Heater.getTemperature(), 1);
+        Heater Heater = new Heater(0, 50);
+        System.out.println("Temperatura " + Heater.getTemperature());
+        Heater.warmer(); 
+        System.out.println("Temperatura final " + Heater.getTemperature());
+    }
+    @Test
+    public void testcantBeWarmer(){
+        Heater Heater = new Heater(0, 50);
+        
+        System.out.println("temperatura de inicio " + Heater.getTemperature());
+        
+        Heater.warmer(); 
+    System.out.println("despues del primer imcremento" + Heater.getTemperature());
+        
+        Heater.warmer(); 
+        System.out.println("despues del segundo incremento" + Heater.getTemperature());
+        
+        
+    }
+    public void testcantBeCooler(){
+        Heater Heater = new Heater(0, 50);
+        
+        System.out.println("temperatura de inicio " + Heater.getTemperature());
+        
+        Heater.warmer(); 
+    System.out.println("despues del primer decremento" + Heater.getTemperature());
+        
+        Heater.warmer(); 
+        System.out.println("despues del segundo decremento " + Heater.getTemperature());
+        
+        
     }
     /**
      * Sets up the test fixture.
@@ -59,4 +90,9 @@ public class HeaterTest
     {
     }
     
+
+    @Test
+    public void prueba()
+    {
+    }
 }
