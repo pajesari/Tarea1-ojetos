@@ -33,9 +33,6 @@ public class Heater
 }
 }
     public void setIncrement(float newIncrement) {
-    if (newIncrement > 0) {
         increment = newIncrement;
     }
-
-}
 }

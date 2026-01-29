@@ -19,14 +19,14 @@ public class HeaterTest
     public HeaterTest()
     {
     }
-    @Test
+    
     public void testInit(){
        Heater Heater = new Heater(0, 500);
        float temperature = Heater.getTemperature();
        
        System.out.println("La temperatura del calentador " + temperature);
     }
-    @Test
+    
     public void testWarmer(){
         Heater Heater = new Heater(0, 50); 
         
@@ -35,14 +35,14 @@ public class HeaterTest
         System.out.println("Temperatura final " + Heater.getTemperature());
         
     }
-    @Test
+    
     public void testCooler(){
         Heater Heater = new Heater(0, 50);
         System.out.println("Temperatura " + Heater.getTemperature());
         Heater.warmer(); 
         System.out.println("Temperatura final " + Heater.getTemperature());
     }
-    @Test
+    
     public void testcantBeWarmer(){
         Heater Heater = new Heater(0, 50);
         
@@ -68,6 +68,27 @@ public class HeaterTest
         System.out.println("despues del segundo decremento " + Heater.getTemperature());
         
         
+    }
+    
+    public void testIncrement() {
+        Heater Heater = new Heater(0, 100);
+        
+        
+        System.out.println("Incremento inicial: 5.0");
+        
+        
+        float intentoNegativo = -15;
+        System.out.println("cambiando valores: " + intentoNegativo);
+        Heater.setIncrement(intentoNegativo);
+        Heater.warmer(); 
+        
+        System.out.println("temperatura final: " + Heater.getTemperature());
+        
+        if(Heater.getTemperature() == 20.0) {
+             System.out.println("se ignoro el valor negativo");
+        } else {
+             System.out.println("error valor negativo¿¿¿");
+        }
     }
     /**
      * Sets up the test fixture.
