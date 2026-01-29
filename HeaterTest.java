@@ -90,6 +90,24 @@ public class HeaterTest
              System.out.println("error valor negativo¿¿¿");
         }
     }
+
+    public void testIncrementCantBeNegative() {
+        Heater Heater = new Heater(0, 50);        
+        
+        System.out.println("decremento tiene un valos de -5");
+        Heater.setIncrement(-5);
+        Heater.warmer();
+        
+        float finalTemp = Heater.getTemperature();
+        System.out.println("temperatura desvues de haber subido" + finalTemp);
+        
+        if (finalTemp == 20.0) {
+            System.out.println("valor aceptado");
+        } else {
+            System.out.println("error");
+        }
+        
+    }
     /**
      * Sets up the test fixture.
      *
