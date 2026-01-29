@@ -15,4 +15,11 @@ public class Heater
     float getTemperature(){
         return temperature;
     }
+    void warmer() {
+    temperature = temperature + 5;
+}
+
+    void cooler() {
+    temperature = temperature - 5;
+}
 }
