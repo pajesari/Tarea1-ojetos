@@ -21,12 +21,12 @@ public class HeaterTest
     }
     @Test
     public void testInit(){
-       Heater Heater = new Heater();
+       Heater Heater = new Heater(0, 500);
        assertEquals(15, Heater.getTemperature(), .1);
     }
     @Test
     public void testWarmer(){
-        Heater Heater = new Heater();
+        Heater Heater = new Heater(0, 500);
         Heater.warmer();
         assertEquals(20, Heater.getTemperature(), 1);
         
@@ -34,7 +34,7 @@ public class HeaterTest
     }
     @Test
     public void testCooler(){
-        Heater Heater = new Heater();
+        Heater Heater = new Heater(0, 500);
         Heater.cooler();
         assertEquals(10, Heater.getTemperature(), 1);
     }
