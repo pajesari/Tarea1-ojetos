@@ -32,6 +32,12 @@ public class HeaterTest
         
         
     }
+    @Test
+    public void testCooler(){
+        Heater Heater = new Heater();
+        Heater.cooler();
+        assertEquals(10, Heater.getTemperature(), 1);
+    }
     /**
      * Sets up the test fixture.
      *
