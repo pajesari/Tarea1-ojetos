@@ -24,7 +24,14 @@ public class HeaterTest
        Heater Heater = new Heater();
        assertEquals(15, Heater.getTemperature(), .1);
     }
-
+    @Test
+    public void testWarmer(){
+        Heater Heater = new Heater();
+        Heater.warmer();
+        assertEquals(20, Heater.getTemperature(), 1);
+        
+        
+    }
     /**
      * Sets up the test fixture.
      *
