@@ -8,9 +8,15 @@
 public class Heater
 {
     private float temperature;
+    private float min;
+    private float max;
+    private float increment;
     
-    public Heater(){
+    public Heater(float tempMin, float tempMax){
         temperature = 15;
+        max = tempMax;
+        min = tempMin;
+        increment = 5;
     }
     float getTemperature(){
         return temperature;
