@@ -28,6 +28,8 @@ public class Heater
 }
 
     void cooler() {
+    if ((temperature - increment) >= min){
     temperature = temperature - increment;
+}
 }
 }
