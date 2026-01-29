@@ -22,10 +22,10 @@ public class Heater
         return temperature;
     }
     void warmer() {
-    temperature = temperature + 5;
+    temperature = temperature + increment;
 }
 
     void cooler() {
-    temperature = temperature - 5;
+    temperature = temperature - increment;
 }
 }
