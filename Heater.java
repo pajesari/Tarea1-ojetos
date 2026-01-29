@@ -22,7 +22,9 @@ public class Heater
         return temperature;
     }
     void warmer() {
+    if ((temperature + increment) <= max){    
     temperature = temperature + increment;
+}
 }
 
     void cooler() {
